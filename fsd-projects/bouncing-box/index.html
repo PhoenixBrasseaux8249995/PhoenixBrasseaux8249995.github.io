@@ -81,14 +81,17 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
+        
         positionX = positionX+ speed 
         moveBoxTo(positionX)
          if (positionX > boardWidth){
           speed=speed*-1
            
+         } if (positionX < 0){
+          speed *= -1
          }
         
-        
+      }
 
         /**
          * This Function will be called each time the box is clicked.
@@ -107,7 +110,15 @@ speed = speed +3
 
 
         
-      };
+     
+
+
+
+
+
+       
+      })();
     </script>
   </body>
 </html>
+
